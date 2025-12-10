@@ -37,7 +37,7 @@ jobs:
         env:
           NUGET_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          global-json-file: global.json
+          dotnet-version: '8.0.416'
           source-url: https://nuget.pkg.github.com/open-feature/index.json
 
       - name: Cache NuGet packages
@@ -76,7 +76,7 @@ jobs:
         env:
           NUGET_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          global-json-file: global.json
+          dotnet-version: '8.0.416'
           source-url: https://nuget.pkg.github.com/open-feature/index.json
 
       - name: build
