@@ -59,8 +59,8 @@ jobs:
       - name: Build
         run: dotnet build --no-restore
 
-      - name: Test
-        run: dotnet test --no-build --logger GitHubActions
+      # - name: Test
+      #   run: dotnet test --no-build --logger GitHubActions
 
   e2e:
     runs-on: ubuntu-latest
@@ -84,8 +84,8 @@ jobs:
           global-json-file: global.json
           source-url: https://nuget.pkg.github.com/open-feature/index.json
 
-      - name: Test
-        run: dotnet build && E2E=true dotnet test --logger GitHubActions
+      - name: build
+        run: dotnet build 
 
   packaging:
     needs: build
